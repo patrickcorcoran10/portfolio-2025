@@ -1,5 +1,18 @@
+'use strict'
+import React from 'react'
 
-const ProjectCard = ({name, techStack, description, repo}) => {
+interface ProjectCardProps {
+    project: string;
+    techStack: string[];
+    description: string;
+    repo: string;
+}
+const ProjectCard: React.FC<ProjectCardProps> = ({
+    project,
+    techStack,
+    description,
+    repo
+}) => {
     return (
         <div className="relative bg-gray text-black-800 rounded-lg shadow-lg p-6 max-w-xs
         sm:max-w-md mx-auto transform hover:scale-105 transition-transform 
@@ -17,7 +30,7 @@ const ProjectCard = ({name, techStack, description, repo}) => {
                     image here
                 </div>
                 <h2 className="text-xl font-bold text-black-800 mb-1">
-                    {name}
+                    {project}
                 </h2>
                 <ul>
                     {techStack.map((tech:string, i:number) => (
