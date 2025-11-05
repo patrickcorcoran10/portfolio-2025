@@ -4,10 +4,10 @@ import React, { useEffect, useState } from "react";
 
 const Jumbotron = () => {
 //   const { theme } = useTheme();
-  const [mounted, setMounted] = useState();
+//   const [mounted, setMounted] = useState();
 
   useEffect(() => {
-    setMounted(true);
+    // setMounted(true);
   }, []);
   return (
 <div className={`w-full p-2 mob:p-4 rounded-lg transition-all ease-out duration-300`}>      
