@@ -3,13 +3,13 @@ import ProjectCard from './components/ProjectCard';
 
 const projects = [
   {
-    name: "baseball game",
+    project: "baseball game",
     techStack: ['javascript', 'node', 'express', 'mysql', 'react'],
     description: 'This is a baseball application that lets the user see some baseball action',
     repo: 'github.com'
   },
   {
-    name: 'grocery list',
+    project: 'grocery list',
     techStack: ['javascript', 'node', 'express', 'mysql', 'react'],
     description: 'the grocery list must be respected',
     repo: 'this-repo.com'
@@ -26,7 +26,7 @@ export default function Home() {
         {projects.map((project, i) => (
           <ProjectCard
             key={i}
-            name={project.name}
+            project={project.project}
             techStack={project.techStack}
             description={project.description}
             repo={project.repo}
