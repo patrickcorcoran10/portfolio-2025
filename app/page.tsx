@@ -1,5 +1,8 @@
 import Jumbotron from "./components/jumbotron";
 import ProjectCard from './components/ProjectCard';
+import Introduction  from "./components/Introduction";
+import Header from "./components/Header"
+import SocialLinks from './components/SocialLinks'
 
 const projects = [
   {
@@ -18,11 +21,14 @@ const projects = [
 
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
+    <div className="flex w-full items-left justify-left bg-zinc-50 font-sans dark:bg-black flex-col">
+      <Header/>
+      <main className="flex min-h-screen w-full flex-col items-left justify-start bg-white dark:bg-black sm:items-start">
         <Jumbotron/>
+        <SocialLinks/>
+        <Introduction/>
         <div className="min-h-screen bg-black-100 flex flex-wrap 
-        justify-center items-center p-4">
+        justify-center items-center p-4 flex-row">
         {projects.map((project, i) => (
           <ProjectCard
             key={i}
